@@ -49,6 +49,17 @@ header .logo{
   text-decoration: none;
 }
 
+header .shop-cart-button{
+  float: right;
+  cursor: pointer;
+  transition: color 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active{
+  color:#62035a;
+}
+
 header .presentation{
   margin: 50px 0;
   background: url(./images/banner-new\ balance.jpg) no-repeat;
@@ -56,7 +67,7 @@ header .presentation{
   background-position: center center;
   background-blend-mode: multiply;
   width: 100%;
-  color:#F2F2F2;
+  color:white; 
   height:500px;
   position: relative;
 }
@@ -69,4 +80,66 @@ header .presentation::after{
   font-size: 40px;
   font-weight: 600;
   color: black;
+}
+
+main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main .item{
+  background-color: #056CF2 ;
+  width: 30%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+main .item img{
+  width: 100%;
+  transition: transform 500ms ease;
+}
+
+main .item img:hover{
+  transform: scale(1.05);
+} 
+
+main h2,
+main p,
+main b{
+  margin: 10px 20px;
+  color: #e3e0e0;
+  padding-bottom: 25px;
+}
+
+main b{
+  color: #d75712;
+}
+
+main .add-to-cart{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #030F26;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 500ms ease;
+}
+
+main .add-to-cart:hover{
+  color: red;
+  transform: scale(1.05) translateY(-5px);
+}
+
+footer{
+  text-align: center;
+  margin-top: 10px;
 }
