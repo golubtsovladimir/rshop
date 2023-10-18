@@ -18,15 +18,15 @@ body{
   margin: 50px auto;
 }
 
+header{
+  position: relative;
+}
+
 header .logo{
   font-weight: 600;
   font-size: 20px;
   
 }   
-
-.logo-div{
-  display: inline;
-}
 
 .nav-list{
   float: right; 
@@ -52,12 +52,82 @@ header .logo{
 header .shop-cart-button{
   float: right;
   cursor: pointer;
-  transition: color 500ms ease;
+  transition: color, transform 500ms ease;
 }
 
 header .shop-cart-button:hover,
 header .shop-cart-button.active{
   color:#62035a;
+}
+
+header .shop-cart{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  min-height: 100px;
+  background-color: #056CF2;
+  -webkit-box-shadow: 7px 5px 84px 25px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 7px 5px 84px 25px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 7px 5px 84px 25px rgba(0, 0, 0, 0.5) inset;
+  z-index: 1;
+}
+
+header .shop-cart .item{
+  display: flex;
+  color: white;
+  border: 3px solid white;
+}
+
+.item .item-text{
+  margin: auto auto;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif; 
+}
+
+.item .item-text b{
+  display: inline-block;
+  margin: 15px ;
+  color: red;
+}
+
+.item .item-text h2{
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif; 
+}
+
+header .empty p{
+  color: red;
+  text-align: center;
+}
+
+
+
+header .shop-cart .item img{
+  width: 150px;
+}
+
+header .shop-cart .item .delete-icon{
+  color: white;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop-cart .item .delete-icon:hover{
+  color: #030F26;
+  transform: scale(1.15);
+}
+
+header .shop-cart .summa{
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header .shop-cart .summa .price{
+  color: red;
 }
 
 header .presentation{
@@ -143,3 +213,5 @@ footer{
   text-align: center;
   margin-top: 10px;
 }
+
+
