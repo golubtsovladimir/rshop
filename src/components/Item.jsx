@@ -3,7 +3,7 @@ import React from "react";
 export default function Item(props){
   return(
     <div className="item">
-      <img src={"./img/"+ props.item2.img} width={"300px"}/>
+      <img src={"./img/"+ props.item2.img} width={"300px"} onClick={()=>props.onShowItem(props.item2)}/>
       <h2>{props.item2.title}</h2>
       <p>{props.item2.desc}</p>
       <b>{props.item2.price}</b>
